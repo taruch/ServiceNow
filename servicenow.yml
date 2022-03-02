@@ -1,4 +1,4 @@
-plugin: servicenow.servicenow.now
+plugin: servicenow.itsm.now
 table: cmdb_ci_netgear
 fields: [ip_address,fqdn,category,sys_class_name,name]
 keyed_groups:

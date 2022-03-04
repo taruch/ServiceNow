@@ -13,7 +13,7 @@ query:
     class: Computer
     manufacturer: STARTSWITH Cisco
 group_by:
-  manufacturer:
+  os:
 keyed_groups:
   - key: os
     separator: ""

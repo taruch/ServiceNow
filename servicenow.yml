@@ -1,9 +1,11 @@
 ---
 plugin: servicenow.servicenow.now
 table: cmdb_ci_computer
+fields: [name,host_name,fqdn,ip_address,os,manufacturer]
 columns:
   - ip_address
   - name
+  - fqdn
   - vm_inst_id
 query:
   - operational_status: = 1
@@ -11,7 +13,7 @@ query:
     class: Computer
     manufacturer: STARTSWITH Cisco
 keyed_groups:
-  - key: Operating System
+  - key: os
     separator: ""
 #groups:
 #  development: "'devel' in environment"

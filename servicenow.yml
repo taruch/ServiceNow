@@ -12,6 +12,8 @@ query:
     fqdn: ISNOTEMPTY
     class: Computer
     manufacturer: STARTSWITH Cisco
+group_by:
+  manufacturer:
 keyed_groups:
   - key: os
     separator: ""

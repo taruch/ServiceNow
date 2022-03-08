@@ -1,11 +1,12 @@
 ---
 plugin: servicenow.itsm.now
-#table: cmdb_ci_server
-#fields: [name,host_name,fqdn,ip_address,os,manufacturer]
+table: cmdb_ci_computer
 columns:
   - ip_address
   - name
   - fqdn
+  - os
+  - manufacturer
 #query:
 #  - operational_status: = 1
 #    fqdn: ISNOTEMPTY

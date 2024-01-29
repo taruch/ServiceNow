@@ -25,14 +25,13 @@ keyed_groups:
   - key: dns_domain | lower
     prefix: ''
     seperator: ''
-  - key: sys_class_name | lower
+  - key: sys_class_name | lower | regex_replace("[/ ]", "_")
     prefix: ''
     separator: ''
   - key: cpu_type | lower | regex_replace("[,^ /+]", "")
     prefix: ''
     separator: ''
-  - key: os | lower | regex_replace("[ /]", "_")
-  #- key: os | lower
+  - key: os | lower | regex_replace("[/ ]", "_")
     prefix: ''
     separator: ''
 

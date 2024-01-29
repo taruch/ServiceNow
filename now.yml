@@ -31,8 +31,8 @@ keyed_groups:
   - key: cpu_type | lower | regex_replace("[,^ /+]", "")
     prefix: ''
     separator: ''
-  #- key: os | lower | regex_replace("[ /]", "_")
-  - key: os | lower
+  - key: os | lower | regex_replace("[ /]", "_")
+  #- key: os | lower
     prefix: ''
     separator: ''
 

@@ -1,0 +1,38 @@
+---
+
+# use sno
+plugin: servicenow.itsm.now
+#table: cmdb_ci_computer
+#table: cmdb_ci_vm_object
+#table: cmdb_ci_linux_server
+columns: 
+  - ip_address
+  - fqdn
+  - dns_domain
+  - sys_class_name
+  - name
+  - environment
+  - os
+  - cpu_type
+enhanced: yes
+
+#inventory_hostname_source: fqdn
+
+groups:
+  fileservers: "'file' in (name | lower) "
+
+keyed_groups:
+  - key: dns_domain | lower
+    prefix: ''
+    seperator: ''
+  - key: sys_class_name | lower
+    prefix: ''
+    separator: ''
+  - key: cpu_type | lower | regex_replace("[,^ /+]", "")
+    prefix: ''
+    separator: ''
+  #- key: os | lower | regex_replace("[ /]", "_")
+  - key: os | lower
+    prefix: ''
+    separator: ''
+

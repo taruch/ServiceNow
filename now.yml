@@ -14,7 +14,7 @@ columns:
   - environment
   - os
   - cpu_type
-enhanced: yes
+#enhanced: yes
 
 #inventory_hostname_source: fqdn
 

@@ -2,7 +2,7 @@
 
 # use sno
 plugin: servicenow.itsm.now
-#table: cmdb_ci_computer
+table: cmdb_ci_server
 #table: cmdb_ci_vm_object
 #table: cmdb_ci_linux_server
 columns: 

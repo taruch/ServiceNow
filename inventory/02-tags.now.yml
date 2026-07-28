@@ -1,0 +1,19 @@
+plugin: servicenow.itsm.now
+table: cmdb_key_value
+
+# Force the plugin to use the dot-walked CI name as the host lookup key
+inventory_hostname_source: configuration_item.name
+lowercase_hostname: true
+
+columns:
+  - configuration_item.name
+  - key
+  - value
+
+compose:
+  tag_identifier: key + '_' + value
+
+keyed_groups:
+  - key: tag_identifier
+    prefix: "tag"
+    separator: "_"
